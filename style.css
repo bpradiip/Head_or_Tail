@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: hsl(310, 100%, 52%)%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+h1 {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.outerbox {
+  height: 20rem;
+}
+.coin {
+  top: 14rem;
+  -webkit-transform: rotateX(45deg);
+          transform: rotateX(45deg);
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  border-radius: 100%;
+}
+.animate {
+  -webkit-animation: spin 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+          animation: spin 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.head,
+.tail {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  background: -o-radial-gradient(#fc0000, #ff0000);
+  background: radial-gradient(#ff0202, #ff0000);
+  border: 5px solid #fd0000;
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.tail {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+button {
+  background: #017214;
+  color: white;
+  padding: 0.5rem;
+  width: 9rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 3px 10px #00000052;
+          box-shadow: 3px 3px 10px #00000052;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+button:active {
+  background: #037920;
+}
+button:disabled {
+  background: #017c12;
+  cursor: not-allowed;
+}
+@-webkit-keyframes spin {
+  0% {
+    top: 14rem;
+    -webkit-transform: rotateX(45deg);
+            transform: rotateX(45deg);
+  }
+  50% {
+    -webkit-transform: rotateX(5000deg);
+            transform: rotateX(5000deg);
+    top: 0rem;
+  }
+  100% {
+    top: 14rem;
+    -webkit-transform: rotateX(45deg);
+            transform: rotateX(45deg);
+  }
+}
+@keyframes spin {
+  0% {
+    top: 14rem;
+    -webkit-transform: rotateX(45deg);
+            transform: rotateX(45deg);
+  }
+  50% {
+    -webkit-transform: rotateX(5000deg);
+            transform: rotateX(5000deg);
+    top: 0rem;
+  }
+  100% {
+    top: 14rem;
+    -webkit-transform: rotateX(45deg);
+            transform: rotateX(45deg);
+  }
+}
+.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
